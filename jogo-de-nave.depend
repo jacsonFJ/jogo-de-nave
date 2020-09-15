@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1599774588 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\console.c
+	<windows.h>
+	"console.h"
+
+1599782142 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\console.h
+
+1599787118 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\main.c
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+	"mapa.h"
+	"personagem.h"
+
+1600191537 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\mapa.h
+
+1599779849 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\mapa.c
+	<stdio.h>
+	<stdlib.h>
+	"mapa.h"
+	"console.h"
+
+1599787024 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\personagem.c
+	<stdio.h>
+	<stdlib.h>
+	"mapa.h"
+	"personagem.h"
+	"console.h"
+
+1599786309 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\personagem.h
+
+1600191469 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\inimigos.c
+	<stdio.h>
+	<stdlib.h>
+	"mapa.h"
+	"personagem.h"
+	"console.h"
+	"inimigos.h"
+
+1600191412 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\inimigos.h
+
