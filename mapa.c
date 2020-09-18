@@ -12,6 +12,8 @@ struct mapa {
 };
 
 Mapa* mapa_cria() {
+    system("cls");
+
     Mapa* mapa = NULL;
 
     // parede superior
@@ -67,7 +69,7 @@ Mapa* mapa_retira(Mapa* mapa, int x, int y) {
         anterior->prox = atual->prox;
     }
 
-    mapa_imprime(x, y, "", COLOR_WHITE);
+    mapa_imprime(x, y, ' ', COLOR_WHITE);
     free(atual);// libera memoria do elemento atual
 
     return mapa;
@@ -80,7 +82,7 @@ Mapa* mapa_move(Mapa* mapa, int de_x, int de_y, int para_x, int para_y) {
     }
 
     if (aux != NULL) {
-        mapa_imprime(aux->x, aux->y, "");
+        mapa_imprime(aux->x, aux->y, ' ', COLOR_WHITE);
         aux->x = para_x;
         aux->y = para_y;
         mapa_imprime(aux->x, aux->y, aux->simbolo, aux->cor);

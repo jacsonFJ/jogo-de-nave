@@ -8,7 +8,7 @@
 
 Mapa* mapa;
 Personagem* personagem;
-Inimigo* inimigo;
+Inimigos* inimigos;
 int game_status = STATUS_SUCESSO;
 
 void inicia_jogo() {
@@ -22,14 +22,8 @@ void inicia_jogo() {
         'A',
         COLOR_LIGHTCYAN
     );
-    inimigo = inimigo_cria(
-        (int) MAPA_LARGURA / 2,
-        MAPA_ALTURA - 2,
-        'O',
-        COLOR_LIGHTCYAN
-    );
+    inimigos = inimigos_cria();
     mapa = personagem_insere_mapa(mapa, personagem);
-    mapa = inimigo_insere_mapa(mapa,inimigo);
 }
 
 void controle() {
@@ -59,12 +53,30 @@ void controle() {
 }
 
 int main() {
+    int inimigos_sleep = 0;
     inicia_jogo();
 
     while (game_status != STATUS_GAME_OVER) {
         controle();
+
         Sleep(25);
+
+        inimigos_sleep += 25;
+        if (inimigos_sleep >= 200) {
+            inimigos_sleep = 0;
+            inimigos = inimigos_atualiza_pos(inimigos, mapa);
+            mapa = inimigos_atualiza_mapa(inimigos, mapa);
+            inimigos = inimigos_retira(inimigos);
+            if (inimigos_colidiu(inimigos, personagem) == 1) {
+                game_status = STATUS_GAME_OVER;
+            }
+        }
     }
+
+    mapa = mapa_cria();
+    gotoxy(11, 9);
+    printf("GAME OVER");
+    Sleep(2000);
 
     return 0;
 }

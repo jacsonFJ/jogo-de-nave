@@ -33,15 +33,24 @@ Mapa* personagem_insere_mapa(Mapa* mapa, Personagem* personagem) {
 }
 
 int personagem_move(Mapa* mapa, Personagem* personagem, int x, int y) {
-    if (mapa_tipo(mapa, x, y) == ELEMENTO_PAREDE) {
-        return STATUS_FALHA;
+    int status = STATUS_SUCESSO;
+
+    switch (mapa_tipo(mapa, x, y)) {
+    case ELEMENTO_PAREDE:
+        status = STATUS_FALHA;
+        break;
+    case ELEMENTO_INIMIGO:
+        status = STATUS_COLISAO;
+        break;
     }
 
-    mapa_move(mapa, personagem->x, personagem->y, x, y);
-    personagem->x = x;
-    personagem->y = y;
+    if (status == STATUS_SUCESSO) {
+        mapa_move(mapa, personagem->x, personagem->y, x, y);
+        personagem->x = x;
+        personagem->y = y;
+    }
 
-    return STATUS_SUCESSO;
+    return status;
 }
 
 int personagem_move_cima(Mapa* mapa, Personagem* personagem) {
@@ -58,4 +67,11 @@ int personagem_move_esquerda(Mapa* mapa, Personagem* personagem) {
 
 int personagem_move_direita(Mapa* mapa, Personagem* personagem) {
     return personagem_move(mapa, personagem, personagem->x + 1, personagem->y);
+}
+
+int personagem_na_posicao(Personagem* personagem, int x, int y) {
+    if (personagem->x == x && personagem->y == y) {
+        return 1;
+    }
+    return 0;
 }

@@ -5,37 +5,54 @@
 
 1599782142 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\console.h
 
-1599787118 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\main.c
+1600470604 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\main.c
 	<stdio.h>
 	<stdlib.h>
 	"console.h"
 	"mapa.h"
 	"personagem.h"
+	"inimigos.h"
 
 1600191537 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\mapa.h
 
-1599779849 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\mapa.c
+1600467611 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\mapa.c
 	<stdio.h>
 	<stdlib.h>
 	"mapa.h"
 	"console.h"
 
-1599787024 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\personagem.c
-	<stdio.h>
-	<stdlib.h>
-	"mapa.h"
-	"personagem.h"
-	"console.h"
-
-1599786309 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\personagem.h
-
-1600191469 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\inimigos.c
+1600466619 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\personagem.c
 	<stdio.h>
 	<stdlib.h>
 	"mapa.h"
 	"personagem.h"
 	"console.h"
+
+1600465700 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\personagem.h
+
+1600465726 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\inimigos.c
+	<stdio.h>
+	<stdlib.h>
 	"inimigos.h"
+	"mapa.h"
+	"console.h"
+	"helpers.h"
 
-1600191412 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\inimigos.h
+1600465165 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\inimigos.h
+	"mapa.h"
+	"personagem.h"
+
+1600383918 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\teste.h
+
+1600384479 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\teste.c
+	<stdio.h>
+	<stdlib.h>
+	"teste.h"
+
+1600463963 source:c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\helpers.c
+	<stdio.h>
+	<stdlib.h>
+	"helpers.h"
+
+1600463829 c:\users\jacson feuser\documents\ifsc\estrutura de dados\jogo-de-nave\helpers.h
 

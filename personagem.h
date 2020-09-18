@@ -35,3 +35,8 @@ int personagem_move_esquerda(Mapa* mapa, Personagem* personagem);
  * Move um personagem para direita
  */
 int personagem_move_direita(Mapa* mapa, Personagem* personagem);
+
+/**
+ * Verifica se coordenadas sao a posição atual do personagem
+ */
+int personagem_na_posicao(Personagem* personagem, int x, int y);

@@ -1,38 +1,30 @@
-/** Inimigos*/
-typedef struct inimigo Inimigo;
+#include "mapa.h"
+#include "personagem.h"
+
+typedef struct inimigos Inimigos;
+
+Inimigos* inimigos_cria();
+
+Inimigos* inimigos_insere(Inimigos* ini);
+
+int inimigos_contagem(Inimigos* ini);
 
 /**
- * Cria um novo inimigo
+ * Retira da lista todos os inimigos desativados
  */
-Inimigo* inimigo_cria(int x, int y, char simbolo, int cor);
+Inimigos* inimigos_retira(Inimigos* ini);
 
 /**
- * Insere um inimigo no mapa
+ * Atualiza as coordenadas dos inimigos, mas sem atualizar o mapa
  */
-Mapa* inimigo_insere_mapa(Mapa* mapa, Inimigo* inimigo);
+Inimigos* inimigos_atualiza_pos(Inimigos* ini, Mapa* mapa);
 
 /**
- * Move um inimigo no mapa
+ * Atualiza a posição dos inimigos no mapa
  */
-int inimigo_move(Mapa* mapa, Inimigo* inimigo, int x, int y);
+ Mapa* inimigos_atualiza_mapa(Inimigos* ini, Mapa* mapa);
 
-/**
- * Move um personagem para cima
- */
-int personagem_move_cima(Mapa* mapa, Personagem* personagem);
-
-/**
- * Move um personagem para baixo
- */
-int personagem_move_baixo(Mapa* mapa, Personagem* personagem);
-
-/**
- * Move um personagem para esquerda
- */
-int personagem_move_esquerda(Mapa* mapa, Personagem* personagem);
-
-/**
- * Move um personagem para direita
- */
-int personagem_move_direita(Mapa* mapa, Personagem* personagem);
-
+ /**
+  * Verifica se algum inimigo colidiu com o personagem
+  */
+int inimigos_colidiu(Inimigos* ini, Personagem* per);
